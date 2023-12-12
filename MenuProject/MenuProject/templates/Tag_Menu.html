@@ -1,0 +1,22 @@
+<div class = "menu_body">
+    {%if parents%}
+        <div class="parents_list">
+            <h3 class="parents_title">Родительские меню</h3>
+            {%for parent in parents%}
+                <a class="parents_name" href="{{parent.get_absolute_url}}">{{parent.name}}</a>
+            {%endfor%}
+        </div>
+        {%else%}
+            <h3>Нет родительских меню</h3>
+        {%endif%}
+    <h3>Само меню</h3>
+        <a href="{{menu.get_absolute_url}}">{{menu.name}}</a>
+        {% if children %}
+            <h3>Вложенные меню</h3>
+        {%else%}
+            <h3>Нет вложенных меню</h3>
+        {%endif%}
+        {% for child in children %}
+            <a href="{{child.get_absolute_url}}">{{child.name}}</a>
+        {%endfor%}
+</div>

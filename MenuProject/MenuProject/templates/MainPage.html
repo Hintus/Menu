@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>Main Page</title>
+<head>
+<body>
+<h1>Главные меню</h1>
+    {% for i in MainMenus %}
+    <a href="{{ i.get_absolute_url }}">{{i.name}}</a>
+    {% endfor %}
+<body>

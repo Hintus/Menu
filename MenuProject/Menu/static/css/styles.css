@@ -1,0 +1,36 @@
+.MainPage_backgroup{
+    width: 100%;
+    display: flex;
+}
+
+.parents_list{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.parents_title{
+    top: 35px;
+    position: absolute;
+    align-self: center;
+    margin: 5px;
+}
+
+.parents_name{
+        width:100px
+}
+
+.Main_page_href{
+    margin-left: 110px;
+}
+
+.menu_body{
+    text-align: center;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+

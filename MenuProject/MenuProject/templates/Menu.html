@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{%load static%}
+{% load Menu.tags %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>{{menu.name}}</title>
+<head>
+<body>
+    <a class="Main_page_href" href="{% url 'Main_page' %}">На главную</a>
+    {%draw_menu menu.name%}
+<body>
