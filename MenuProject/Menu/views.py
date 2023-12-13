@@ -18,10 +18,10 @@ def menu_view(request, menu_name):
     def find_parent(current_menu):
         parent = current_menu.parent
         parents.append(parent)
-        if parent.parent != None:
+        if parent.parent:
             find_parent(parent)
 
-    if menu.parent != None:
+    if menu.parent:
         find_parent(menu)
     return render(request, 'menu.html', {'menu': menu, 'children': children, 'parents': parents})
 
