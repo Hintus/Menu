@@ -8,5 +8,12 @@
     <head>
 <body>
     <a class="Main_page_href" href="{% url 'Main_page' %}">На главную</a>
-    {% draw_menu menu.name %}
+    <div style="display: flex">
+        {% draw_menu menu.name %}
+    {% if menu.another_menu %}
+        <div>
+            {% draw_menu menu.another_menu.name %}
+        </div>
+    {% endif %}
+    </div>
 <body>

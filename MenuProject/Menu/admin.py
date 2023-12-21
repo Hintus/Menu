@@ -9,6 +9,13 @@ from .models import *
 class InlineModelMenu(admin.StackedInline):
     model = ModelMenu
     extra = 1
+    fk_name = 'parent'
+
+
+class FriendshipInline(admin.TabularInline):
+    model = ModelMenu
+    extra = 1
+    fk_name = 'another_menu'
 
 
 class ModelMenuAdmin(admin.ModelAdmin):
